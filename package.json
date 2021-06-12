@@ -1,0 +1,48 @@
+{
+  "name": "eazy-form",
+  "version": "0.0.1",
+  "description": "form tools for antd",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "author": "huang.hdc",
+  "license": "ISC",
+  "repository": "https://github.com/hdcoo/easy-form.git",
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "watch": "tsc --watch",
+    "lint": "eslint . --ext .ts",
+    "fix": "eslint . --fix --ext .ts"
+  },
+  "peerDependencies": {
+    "antd": "^4.3.1",
+    "react": "^16.13.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.13.0",
+    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "@typescript-eslint/parser": "^4.8.2",
+    "antd": "^4.3.1",
+    "dayjs": "^1.10.5",
+    "eslint": "^7.21.0",
+    "eslint-config-ali": "^11.3.1",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "react": "^16.13.0",
+    "typescript": "^4.2.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.ts": "eslint --fix",
+    "src/**/*.tsx": "eslint --fix"
+  }
+}
