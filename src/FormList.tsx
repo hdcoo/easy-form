@@ -153,6 +153,10 @@ function FormList<V extends Store>(
     unshift: handleUnshift,
   }));
 
+  if (props.name === undefined) {
+    return <>{content}</>;
+  }
+
   return (
     <FormAccess name={name}>
       {content}
